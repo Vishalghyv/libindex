@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Directing Template">
+    <meta name="keywords" content="Directing, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LibIndex</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href="./"><h2 style="color: red; font-weight: bold;">LibIndex</h2></a>
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-9">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./">Home</a></li>
+                                <li><a href="./team">Team</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__menu__right">
+                            <a href="#" class="primary-btn">Documentation</a>
+                            <a href="https://github.com/dravadhis/libindex" class="btn btn-dark btn-lg"><i class="fa fa-github" style="font-size:40px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+
+    <!-- Hero Section Begin -->
+    <section class="hero set-bg" data-setbg="../static/img/hero/hero-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero__text">
+                        <div class="section-title">
+                            <h2>Search for books, journals, research papers and so on...</h2>
+                            <p>Search the catalog for over 1 billion Digital Text Media </p>
+                        </div>
+                        <div class="hero__search__form">
+                          {% if message %}
+                              <p class="message">{{ message | safe }}</p>
+                          {% endif %}
+                            <form action="/submit" method="POST">
+                                <input type="text" name="text" placeholder="Search...">
+                                <button type="submit" value="Search">Explore Now</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./"><h2 style="color: red; font-weight: bold;">LibIndex</h2></a>
+                        </div>
+                        <p>Project Work for EN-405 DBMS Course (Semester 4)</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 offset-lg-1 col-md-6">
+                    <div class="footer__address">
+                        <ul>
+                            <li>
+                                <span>Project Name</span>
+                                <p>LibIndex</p>
+                            </li>
+                            <li>
+                                <span>Submitted to:</span>
+                                <p>Dr. Prerna Mukherjee</p>
+                            </li>
+                            <li>
+                                <span>Subject</span>
+                                <p>EN405 DBMS</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1 col-md-6">
+                    <div class="footer__widget">
+                        <ul>
+                            <li><a href="./">Home</a></li>
+                            <li><a href="./team">Team</a></li>
+                            <li><a href="./docs">Documentation</a></li>
+                            <li><a href="https://github.com/dravadhis/libindex">Source Code</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="https://www.gutenberg.org/">Project Gutenberg</a></li>
+                            <li><a href="https://archive.org/">Internet Archive</a></li>
+                            <li><a href="https://libgen.is/">Library Genesis</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <a href="./team">Team</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Js Plugins -->
+    <script src="../static/js/jquery-3.3.1.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/jquery.nice-select.min.js"></script>
+    <script src="../static/js/jquery-ui.min.js"></script>
+    <script src="../static/js/jquery.nicescroll.min.js"></script>
+    <script src="../static/js/jquery.barfiller.js"></script>
+    <script src="../static/js/jquery.magnific-popup.min.js"></script>
+    <script src="../static/js/jquery.slicknav.js"></script>
+    <script src="../static/js/owl.carousel.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>
